@@ -31,12 +31,5 @@ Este projeto visa classificar os indivíduos em diferentes categorias de obesida
 - [Alan Almeida](https://github.com/AlanTddy) 
 - [Dalton Campos](https://github.com/daltonfcampos) 
 
-Cada contribuidor desempenhou um papel essencial no desenvolvimento e aprimoramento deste projeto.
-Licença
-
-Este projeto está licenciado sob a Licença MIT. Consulte o arquivo LICENSE para obter mais detalhes.
-Agradecimentos
-
-Agradecemos aos desenvolvedores e à comunidade de código aberto que contribuíram com ferramentas como NumPy, Pandas, scikit-learn, e TensorFlow, que tornaram possível o desenvolvimento deste sistema de classificação de obesidade.
 
 Este README fornece uma visão geral do projeto, incluindo suas funcionalidades, requisitos, instruções de instalação e uso, bem como informações sobre a contribuição e a equipe envolvida.
