@@ -2,7 +2,6 @@
 
 ## Projeto da Disciplina PET1706 - TÓPICOS ESPECIAIS EM ENGENHARIA DE SOFTWARE (Redes Neurais Artificiais) - 2023.2
 > Professora: [Rosana Rego](https://github.com/roscibely)
-!(UFERSA VISTA DE CIMA)[https://raw.githubusercontent.com/roscibely/algorithms-and-data-structure/main/root/ufersa.jpg]
 Curso: [Bacharel em Engenharia de Software](https://engsoftwarepaudosferros.ufersa.edu.br/apresentacao/) - UFERSA - Campus Pau dos Ferros
 
 Este projeto visa classificar os indivíduos em diferentes categorias de obesidade, oferecendo um sistema que auxilia na avaliação da condição física. Utilizamos diversas ferramentas e bibliotecas avançadas para criar um sistema eficiente de classificação de obesidade com base em dados demográficos e de hábitos de vida.
