@@ -21,6 +21,20 @@ Este projeto visa classificar os indivíduos em diferentes categorias de obesida
 
 * Modelo de Machine Learning: O sistema incorpora um modelo de aprendizado de máquina previamente treinado para a classificação de obesidade. Esse modelo foi alimentado com uma ampla variedade de dados demográficos e de hábitos de vida.
 
+## Instalação
+
+1. Clone o repositório do GitHub:
+    git clone https://github.com/ClassNeuralNetwork/reconhecimento_libras.git
+
+2. Navegue até o diretório do projeto:
+    cd Classificar_Obesidade
+
+3. Inicie um ambiente virtual
+    python3 -m venv venv
+
+4. Instale as dependências usando pip:
+    pip install -r requirements.txt
+
 ## Requisitos de Sistema
 
     Python 3.x

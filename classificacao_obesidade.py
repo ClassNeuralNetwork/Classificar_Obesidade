@@ -9,7 +9,7 @@ from tensorflow.keras.optimizers import Adam
 from imblearn.over_sampling import SMOTE
 
 
-df = pd.read_csv('./ObesityDataSet.csv')
+df = pd.read_csv('./dataset/ObesityDataSet.csv')
 
 print(df.head())
 print(df.info())
