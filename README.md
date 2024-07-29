@@ -23,16 +23,16 @@ Este projeto visa classificar os indivíduos em diferentes categorias de obesida
 
 ## Instalação
 
-1. Clone o repositório do GitHub:
+Clone o repositório do GitHub:
     git clone https://github.com/ClassNeuralNetwork/reconhecimento_libras.git
 
-2. Navegue até o diretório do projeto:
+Navegue até o diretório do projeto:
     cd Classificar_Obesidade
 
-3. Inicie um ambiente virtual
+Inicie um ambiente virtual
     python3 -m venv venv
 
-4. Instale as dependências usando pip:
+Instale as dependências usando pip:
     pip install -r requirements.txt
 
 ## Requisitos de Sistema
