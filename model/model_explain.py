@@ -30,12 +30,12 @@ shap_values = np.array(shap_values).squeeze(-1)
 # Plots
 plt.figure()
 shap.summary_plot(shap_values, input_test, plot_type="bar", feature_names=input_test.columns)
-plt.savefig('/home/alanzin/Desktop/Facul 2024.1/Classificar_Obesidade/plots/summary_plot_bar.png')
+plt.savefig('/home/alanzin/Desktop/Facul 2024.1/Classificar_Obesidade/plots/summary_plot_bar.eps', format='eps')
 
 plt.figure()
 shap.summary_plot(shap_values, input_test, feature_names=input_test.columns)
-plt.savefig('/home/alanzin/Desktop/Facul 2024.1/Classificar_Obesidade/plots/summary_plot.png')
+plt.savefig('/home/alanzin/Desktop/Facul 2024.1/Classificar_Obesidade/plots/summary_plot.eps', format='eps')
 
 plt.figure()
 shap.dependence_plot(selected_feature[0], shap_values, input_test)
-plt.savefig('/home/alanzin/Desktop/Facul 2024.1/Classificar_Obesidade/plots/dependence_plot.png')
+plt.savefig('/home/alanzin/Desktop/Facul 2024.1/Classificar_Obesidade/plots/dependence_plot.eps', format='eps')
