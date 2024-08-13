@@ -7,13 +7,13 @@ import tensorflow as tf
 import shap
 
 #Carregando modelo
-model = tf.keras.models.load_model('model.keras')
+model = tf.keras.models.load_model('/home/alanzin/Desktop/Facul 2024.1/Classificar_Obesidade/model/model.keras')
 
-input_test = pd.read_csv('./input_test_standard.csv')
-output_test = pd.read_csv('../dataset/test/output_test.csv')
+input_test = pd.read_csv('/home/alanzin/Desktop/Facul 2024.1/Classificar_Obesidade/model/input_test_standard.csv')
+output_test = pd.read_csv('/home/alanzin/Desktop/Facul 2024.1/Classificar_Obesidade/dataset/test/output_test.csv')
 
 #carregando loss
-history = pd.read_csv('loss.csv')
+history = pd.read_csv('/home/alanzin/Desktop/Facul 2024.1/Classificar_Obesidade/model/loss.csv')
 
 # Avaliar o modelo no conjunto de teste
 test_loss, test_mae = model.evaluate(input_test, output_test)
