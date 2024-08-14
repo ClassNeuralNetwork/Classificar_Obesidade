@@ -51,14 +51,12 @@ model.save('/home/alanzin/Desktop/Facul 2024.1/Classificar_Obesidade/model/model
 
 # Gerar gráfico da função perda
 plt.figure(figsize=(10, 6))
-plt.plot(history.history['loss'], label='Loss (Treino)')
-plt.plot(history.history['val_loss'], label='Loss (Validação)')
-plt.title('Função Perda ao longo das Épocas')
-plt.xlabel('Épocas')
-plt.ylabel('Perda')
+plt.plot(history.history['loss'], label='train')
+plt.plot(history.history['val_loss'], label='validation')
 plt.legend()
+plt.yscale("log")
 plt.grid(True)
-plt.savefig('/home/alanzin/Desktop/Facul 2024.1/Classificar_Obesidade/model/loss_graph.png')
+plt.savefig('/home/alanzin/Desktop/Facul 2024.1/Classificar_Obesidade/plots/funcao_perda.png')
 plt.close()
 
 # Fazer previsões com o modelo treinado
