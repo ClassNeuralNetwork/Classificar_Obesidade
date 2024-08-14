@@ -49,6 +49,18 @@ pd.DataFrame(history.history).to_csv('/home/alanzin/Desktop/Facul 2024.1/Classif
 # Salvar o modelo treinado
 model.save('/home/alanzin/Desktop/Facul 2024.1/Classificar_Obesidade/model/model.keras')
 
+# Gerar gráfico da função perda
+plt.figure(figsize=(10, 6))
+plt.plot(history.history['loss'], label='Loss (Treino)')
+plt.plot(history.history['val_loss'], label='Loss (Validação)')
+plt.title('Função Perda ao longo das Épocas')
+plt.xlabel('Épocas')
+plt.ylabel('Perda')
+plt.legend()
+plt.grid(True)
+plt.savefig('/home/alanzin/Desktop/Facul 2024.1/Classificar_Obesidade/model/loss_graph.png')
+plt.close()
+
 # Fazer previsões com o modelo treinado
 output_pred = model.predict(input_test)
 output_pred = np.argmax(output_pred, axis=1)  # Obter a classe com a maior probabilidade
