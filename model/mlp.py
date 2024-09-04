@@ -19,14 +19,16 @@ input_test = scaler_input.transform(input_test)
 # Salvar os dados normalizados
 pd.DataFrame(input_train).to_csv('/home/alanzin/Desktop/Facul 2024.1/Classificar_Obesidade/model/input_train_standard.csv', index=False)
 pd.DataFrame(input_test).to_csv('/home/alanzin/Desktop/Facul 2024.1/Classificar_Obesidade/model/input_test_standard.csv', index=False)
-
+    
 # Definir o modelo de classificação multi-classe
 model = tf.keras.models.Sequential([
-    tf.keras.layers.Dense(256, activation='relu', input_shape=(input_train.shape[1],)),
+    tf.keras.layers.Dense(256, activation='sigmoid', input_shape=(input_train.shape[1],), kernel_regularizer=tf.keras.regularizers.L1L2(
+    l1=0.0, l2=0.00
+)),
     tf.keras.layers.Dropout(0.5),
-    tf.keras.layers.Dense(128, activation='relu'),
+    tf.keras.layers.Dense(128, activation='sigmoid'),
     tf.keras.layers.Dropout(0.5),
-    tf.keras.layers.Dense(64, activation='relu'),
+    tf.keras.layers.Dense(64, activation='sigmoid'),
     tf.keras.layers.Dropout(0.5),
     tf.keras.layers.Dense(7, activation='softmax')
 ])
@@ -41,7 +43,7 @@ model.compile(optimizer=tf.keras.optimizers.Adam(learning_rate=0.001), loss='spa
 model.summary()
 
 # Treinar o modelo
-history = model.fit(input_train, output_train, epochs=300, validation_split=0.2, callbacks=[early_stopping])
+history = model.fit(input_train, output_train, epochs=300, validation_split=0.2, shuffle=True, callbacks=[early_stopping])
 
 # Salvar o histórico de treinamento
 pd.DataFrame(history.history).to_csv('/home/alanzin/Desktop/Facul 2024.1/Classificar_Obesidade/model/loss.csv', index=False)
